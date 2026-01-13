@@ -1,6 +1,10 @@
-from flask import Flask
+from flask import Flask, request, jsonify
+import requests
+from flask_cors import CORS
+
 app = Flask(__name__)
 
+CORS(app)
 
 def zw_request(phonenumber):
     cookies = {'zcauthcookie': 'XdW-ZAvxW2VY84cDrUNdJ3BZtoZI15N8CGlf3Kaeyb2s2-mxcEZ0tA6c7h6t8Jyphn4ROC0CwtvGdG7z668Qabk74FkAN9b23X1-LVmYkFGeQ9DlMJ95STWWKIJXTPUpOVQ2h8RvgdkjsQ3r3huDOpRXXwTuIBqIBc2M28LnJx2Gh2mrHg1ccXQxQtVMA5I3ldV3lr1D0f2ebZrGiB0WBx27a5di2ciqiB2v5M8MradGLzCJrWHSheSjmrhRRA4fV-2heUuuEPJ8ODtxqX9lQ5DDiAPMsHN2ivEAbrSc714cY3DsGzqLHaI94ZPAusEjZVFYZiotigi2Fq4xYcR-jqChA9RSgGyh9j6o-pO_y0g',}
